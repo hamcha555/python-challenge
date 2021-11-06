@@ -16,7 +16,47 @@ Calculate the changes in "Profit/Losses" over the entire period, then find the a
 
 
 The greatest increase in profits (date and amount) over the entire period
+<<<<<<< HEAD
+The greatest decrease in profits (date and amount) over the entire period
+1) use max/min operator to find max/min
+2) use index to locate corresponding month
+3) print in terminal
+
+In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+1) print analysis in text file and in terminal
+
+
+#PyPoll
+
+
+I started the project but the data set was so large that I created a sample file to run and test python script quickly.  Since county data was irrelevant to the homework instructions I focused on candidates and votes.  By creating lists for each candidates votes.  
+
+
+The total number of votes cast
+I was able to sum up the lengths of each list to get total number of votes
+
+
+A complete list of candidates who received votes
+I created a seperate read operation to build candidate list and applied dictionary function to remove duplicates form the candidate list to determine complete list of candidates
+
+
+The percentage of votes each candidate won
+Using the candidate lists, I counted votes using len() operation and calculated percentages.  I also created a function **perc_formatter(x)** to format percentages to match homework example.
+
+
+The total number of votes each candidate won
+I used sum() operation on candidate lists to tally vote counts.
+
+The winner of the election based on popular vote.
+I had to go back to line 116 to manually build list for candidate vote percentages.  I used max() operation on this list and and if else statement to match the max against the winning candidate.  I tried to use a for loop to create the candidate vote percentage list, but could not and have a question if it is possible for the object of a function to be a concatentage string and variable
+
+
+In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+Similar to the pyBank exercise, I printed analysis to the terminal and exported text file to the analysis folder
+=======
 
 
 The greatest decrease in profits (date and amount) over the entire period
 
+>>>>>>> be8cde4b9ef83be1c392116a9428a3efe43b2375
