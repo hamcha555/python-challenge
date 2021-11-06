@@ -8,7 +8,7 @@ from typing import Counter, DefaultDict
 #---------------------------------------------------------
 #-----pull csv file data-----
 #---------------------------------------------------------
-elec_path = os.path.join('resources','election_data.csv')
+elec_path = os.path.join('resources','election_data_sample.csv')
 
 # lists & variable
 voteslist_1 = []
@@ -48,7 +48,7 @@ winner_text = ""
 # Function to format percentage
 #---------------------------------------------------------
 def perc_formatter(x):
-    pldiff_formatter = "{0:.2%}"
+    pldiff_formatter = "{0:.3f}%"
     pldiff_avg_output = pldiff_formatter.format(x)
     return(pldiff_avg_output)
 
@@ -60,7 +60,7 @@ print(f"----------------------------")
 
 
 #---------------------------------------------------------
-#-----FOR REFERENCE : Determine number of candidates
+#-----Determine number of candidates
 #---------------------------------------------------------
 with open(elec_path, 'r') as elec_file: 
     elec_reader = csv.reader(elec_file, delimiter = ",")
@@ -188,3 +188,36 @@ with open(output_path, 'w') as f:
     f.write("----------------------------" + "\n")
     f.write(winner_text + "\n")
     f.write("----------------------------")
+    
+
+# #---------------------------------------------------------
+# #-----METHOD 2 Create FUNCTION
+# #---------------------------------------------------------
+# # Define the function and have it accept the 'elec_data' as its sole parameter
+# def print_percentages(elec_data):
+#     # For readability, it can help to assign your values to variables with descriptive names
+#     voterID = str(elec_data[0])
+#     county = str(elec_data[1])
+#     candidate = int(elec_data[2])
+    
+#     # Total matches can be found by adding wins, losses, and draws together
+#     # total_matches = wins + losses + draws
+
+
+# #---------------------------------------------------------
+# #-----METHOD 1 Create  [list] and print voter total
+# #---------------------------------------------------------
+
+        
+# with open(elec_path, 'r') as elec_file: 
+#     elec_reader = csv.reader(elec_file, delimiter = ",")
+#     elec_header = next(elec_reader)
+
+#     for row in csv.reader(elec_file, delimiter = ","):
+#         voter_list.append(row[0])
+#         county_list.append(row[1])
+#         candidate_list.append(row[2])
+
+#         voter_sum= len(voter_list)
+    
+#     print(f"Total Votes: {voter_sum}")
