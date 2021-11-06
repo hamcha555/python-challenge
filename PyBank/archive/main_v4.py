@@ -68,23 +68,47 @@ print(month_text)
 profit_text = (f"Total: ${pl_sum}")
 print(profit_text)
 
-
 #=======================================================
 ## In order to run loop to start at the end, run reverse operaion on  pl_list 
 #=======================================================
 pl_list_reverse = pl_list[:]
 pl_list_reverse.reverse()
 
+# pldiff_a = 0 
+# pldiff_b = 0
+# # # print(pl_list[month_sum-1])
 
-#=======================================================
-## On reversed list, run for loop on RANGE in order to use list index 
-# to calculate difference between date starting from end of original list
-#=======================================================
+# pldiff = pl_list_reverse[0] - pl_list_reverse[1]
+# print(pldiff)
+
+# # enumerate(ints) creates a tuple with the value and index together
+# for idx, val in enumerate(pl_list_reverse):
+#     print(idx, val)
+
+## CANNOT USE INDEX as this calls the value of the list in order.
+## in this case "i" is NOT index.  For loop will ouput value
+# for i in (pl_list_reverse):
+#     pldiff = pl_list_reverse[i] - pl_list_reverse[i + 1]
+#     print(pldiff)
+#     pldiff_list.append(pldiff)
+
+#     # pldiff_sum = pldiff_sum + pldiff
+    
+# idx = range(0, (len(month_list)- 1))
+# print(idx)
+
+# # enumerate(ints) creates a tuple with the value and index together
+# for idx, val in enumerate(pl_list_reverse):
+#     idx = range(0, (len(month_list)- 1))
+#     pldiff = pl_list_reverse[idx] - pl_list_reverse[idx + 1]
+#     pldiff_list.append(pldiff)
+
+# enumerate(ints) creates a tuple with the value and index together in order to use operators on index
+# List in the for loop
 for idx in range(0, ((month_sum)-1)):
     pldiff = pl_list_reverse[idx] - pl_list_reverse[idx + 1]
     pldiff_list.append(pldiff)
 
-#---FOR REFERENCE---
 #print(pldiff_list)
 
 pldiff_avg = sum(pldiff_list) / ((month_sum) - 1)
