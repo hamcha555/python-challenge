@@ -52,11 +52,4 @@ I had to go back to line 116 to manually build list for candidate vote percentag
 
 
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
-
 Similar to the pyBank exercise, I printed analysis to the terminal and exported text file to the analysis folder
-=======
-
-
-The greatest decrease in profits (date and amount) over the entire period
-
->>>>>>> be8cde4b9ef83be1c392116a9428a3efe43b2375
